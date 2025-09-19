@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import { Link } from "react-router";
 
 export default function RegisterPage() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -100,9 +101,9 @@ export default function RegisterPage() {
         {/* Bottom link */}
         <p className="text-sm text-gray-600 text-center mt-4">
           Already have an account?{" "}
-          <a href="#" className="text-yellow-600 hover:underline">
+          <Link to={'/Login'} className="text-yellow-600 hover:underline">
             Login
-          </a>
+          </Link>
         </p>
       </div>
     </div>
