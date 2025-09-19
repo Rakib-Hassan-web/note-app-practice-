@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { createBrowserRouter, Route, Router, RouterProvider } from 'react-router'
 import { createRoutesFromElements } from 'react-router'
+import Home from './components/Home'
+import RegisterPage from './pages/RegisterPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +14,8 @@ function App() {
 
     <Route >
 
-      <Route index element={'/Home'} />
+      <Route index element={<Home/>} />
+      <Route path='/Register' element={<RegisterPage/>} />
 
     </Route>
   ))
